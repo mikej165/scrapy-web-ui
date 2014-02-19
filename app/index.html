@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Scrapy Web UI</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/dashboard" title="Dashboard"><i class="fa fa-dashboard"></i></a></li>
+                <li><a href="#/projects" title="Projects"><i class="fa fa-folder-o"></i></a></li>
+                <li><a href="#/jobs" title="Jobs"><i class="fa fa-tasks"></i></a></li>
+                <li><a href="#/spiders" title="Spiders"><i class="fa fa-globe"></i></a></li>
+                <!--<li><a href="#/items" title="Items"><i class="fa fa-list"></i></a></li>-->
+                <li><a href="#/logs" title="Logs"><i class="fa fa-terminal"></i></a></li>
+                <li><a href="#/documentation" title="Documention"><i class="fa fa-book"></i></a></li>
+            </ul>
+            <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+            <!--</form>-->
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="main-container" class="container"></div>
+        </div>
+    </div>
+</div>
+
+<div id="confirmModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 id="confirmModalTitle" class="modal-title">Modal title</h4>
+            </div>
+            <div id="confirmModalBody" class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div id="confirmModalFooter" class="modal-footer">
+                <button id="yesButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="noButton" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<div class="modal  fade" id="infoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button id="dismissButton" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Dismiss.
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/lodash-2.4.1-min.js"></script>
+<script src="js/vendor/backbone-1.1.1-min.js"></script>
+<script src="js/vendor/marionette-1.6.2-min.js"></script>
+<script src="js/vendor/mustache.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/utils.js"></script>
+
+<script src="js/routers/scrapy.js"></script>
+
+
+<script src="js/views/dashboard.js"></script>
+<script src="js/views/documentation.js"></script>
+<script src="js/views/items.js"></script>
+<script src="js/views/jobs.js"></script>
+<script src="js/views/job-item.js"></script>
+<script src="js/views/logs.js"></script>
+<script src="js/views/projects.js"></script>
+<script src="js/views/project-item.js"></script>
+<script src="js/views/spiders.js"></script>
+<script src="js/views/spider-item.js"></script>
+<script src="js/views/404.js"></script>
+
+<script src="js/collections/jobs.js"></script>
+<script src="js/collections/projects.js"></script>
+<script src="js/collections/spiders.js"></script>
+<script src="js/collections/versions.js"></script>
+
+</body>
+</html>
