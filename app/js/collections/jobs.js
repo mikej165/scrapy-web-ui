@@ -6,7 +6,7 @@
 Scrapy.Collections.Jobs = Backbone.Collection.extend({
 
     url: function(){
-        return Scrapy.SERVER + '/listjobs.json?project=' + this.project;
+        return Scrapy.PROXY + '/listjobs.json?project=' + this.project;
     },
 
     parse: function(response){

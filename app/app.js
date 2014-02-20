@@ -1,16 +1,17 @@
 var http = require('http');
 var child_process = require('child_process');
 var fs = require('fs');
+var config = require('./config');
 
-http.createServer(onRequest).listen(3000);
+http.createServer(onRequest).listen(config.settings.local_port);
 
-var json_cmds = ['addversion.json','schedule.json','cancel.json','listprojects.json','listversions,json','listspiders.json','listjobs.json','delversion.json','delproject.json'];
+var json_cmds = ['/addversion.json','/schedule.json','/cancel.json','/listprojects.json','/listversions,json','/listspiders.json','/listjobs.json','/delversion.json','/delproject.json','/logs','/items'];
 
 function isApiRequest(url){
     var result = false;
     url = url.toLowerCase();
     for(var i = 0; i < json_cmds.length; i++){
-        if(url.indexOf(json_cmds[i]) != -1){
+        if(url.indexOf(json_cmds[i]) === 0){
             console.log('Found: ' + json_cmds[i]);
             result = true;
             break;
@@ -23,15 +24,15 @@ function isApiRequest(url){
 function onRequest(client_req, client_res) {
 
     var options = {
-        hostname: 'ec2-50-16-60-252.compute-1.amazonaws.com',
-        port: 6800,
+        hostname: config.scrapyds[0].host,
+        port: config.scrapyds[0].port,
         path: client_req.url,
         method: 'GET'
     };
 
     if(isApiRequest(client_req.url) === true){
         // Proxy all API requests
-
+        console.log('Proxying to: ' + options.hostname + ':' + options.port + options.path);
         var proxy = http.request(options, function (res) {
             res.pipe(client_res, {
                 end: true
@@ -51,9 +52,12 @@ function onRequest(client_req, client_res) {
             // This just pipes the read stream to the response object (which goes to the client)
             readStream.pipe(client_res);
         });
+        readStream.on('error', function(){
+            console.log('Invalid request received: ' + f);
+        })
 
     }
 }
 
 
-child_process.spawn('open', ['http://localhost:3000/index.html']);
+child_process.spawn('open', ['http://localhost:'+ config.settings.local_port + '/index.html']);

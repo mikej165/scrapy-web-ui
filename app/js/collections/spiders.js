@@ -5,7 +5,7 @@
  */
 Scrapy.Collections.Spiders = Backbone.Collection.extend({
     url: function(){
-        return Scrapy.SERVER + '/listspiders.json?project=' + this.project;
+        return Scrapy.PROXY + '/listspiders.json?project=' + this.project;
     },
 
     parse: function(response){

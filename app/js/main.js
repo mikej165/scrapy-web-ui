@@ -14,7 +14,7 @@ Scrapy = {
 
     init:function () {
 
-        Scrapy.SERVER = 'http://ec2-50-16-60-252.compute-1.amazonaws.com:6800';
+        Scrapy.PROXY = 'http://localhost:' + config.settings.local_port;
 
         // Create an event broker
         Scrapy.events = _.clone(Backbone.Events);
