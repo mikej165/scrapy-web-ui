@@ -5,16 +5,16 @@
  */
 config = {};
 
-    // A comma separated list of hosts on which you have Scrapyd running. (Only one supported at present)
+// A comma separated list of hosts on which you have Scrapyd running. (Only one supported at present)
 config.scrapyds = [
         // Just the hostname (or ip) sans protocol - no 'http://' or 'https://'
-        {'host': 'yourhost.com', 'port': 6800}
+        {'host': 'yourscrapydhost.com', 'port': 6800}
     ];
 
-    //Various app settings (currently unused)
+//Various app settings
 config.settings= {
-        parse_logs: true,
-        parse_items: true,
+//        parse_logs: true,
+//        parse_items: true,
         local_port: 3001 // Change this if it is unsuitable for your environment
 }
 

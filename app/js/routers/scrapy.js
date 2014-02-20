@@ -13,6 +13,6 @@ Scrapy.Routers.ApplicationRouter = Backbone.Router.extend({
         'projects':         'projects',
         'spiders':          'spiders',
         '404(/:url)':       '404',
-        '*actions':         'dashboard' // Catch-all
+        '*actions':         'jobs' // Catch-all
     }
 });
