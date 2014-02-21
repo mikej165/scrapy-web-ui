@@ -7,7 +7,7 @@ Near-term enhancements will include:
  * Full support for all API calls, including those not presently offered in the default scrapyd UI, such as scheduling and canceling jobs
  * Deploying new projects
  * Rudimentary stats reporting
- * Log viewer with filtering
+ * Log viewer with advanced filtering and searching
  * Multiple scrapyd hosts
 
 
@@ -29,5 +29,5 @@ Scrapy-web-ui should immediately open in your default web browser. If it doesn't
 
 ### Notes
 * app.js directly serves up the local html/js/css to your browser while proxying all scrapyd API calls to the server you've configured. This is to get around cross-site request limitations of most browsers
-* The app assumes the remote scrapyd is running without user authentication, as is the default. Future versions will provide support for different means scrapyd user authentication. (Suggestions of what to suport are welcome).
+* The app assumes the remote scrapyd is running without user authentication, as is the default. Future versions will provide support for different means scrapyd user authentication. (Suggestions of what to support are welcome).
 * If you are using scrapyd in its default configuration on a server open to the world, at a minimum you should be restricting access to the server by firewalling it to allow requests only from your IP
