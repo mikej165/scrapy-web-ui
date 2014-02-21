@@ -11,7 +11,8 @@
     <title>Dashboard Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css" rel="stylesheet">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -40,12 +41,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Scrapy Web UI</a>
+            <a class="navbar-brand" href="#">Scrapyd Web UI</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <!--<li><a href="#/dashboard" title="Dashboard"><i class="fa fa-dashboard"></i></a></li>-->
-                <!--<li><a href="#/projects" title="Projects"><i class="fa fa-folder-o"></i></a></li>-->
+                <li><a href="#/projects" title="Projects"><i class="fa fa-folder-o"></i></a></li>
                 <li><a href="#/jobs" title="Jobs"><i class="fa fa-tasks"></i></a></li>
                 <!--<li><a href="#/spiders" title="Spiders"><i class="fa fa-globe"></i></a></li>-->
                 <!--&lt;!&ndash;<li><a href="#/items" title="Items"><i class="fa fa-list"></i></a></li>&ndash;&gt;-->
@@ -126,6 +127,7 @@
 <script src="js/views/jobs.js"></script>
 <script src="js/views/job-item.js"></script>
 <script src="js/views/logs.js"></script>
+<script src="js/views/log.js"></script>
 <script src="js/views/projects.js"></script>
 <script src="js/views/project-item.js"></script>
 <script src="js/views/spiders.js"></script>
@@ -136,6 +138,8 @@
 <script src="js/collections/projects.js"></script>
 <script src="js/collections/spiders.js"></script>
 <script src="js/collections/versions.js"></script>
+
+<script src="js/models/log.js"></script>
 
 <script src="../config.js"></script>
 

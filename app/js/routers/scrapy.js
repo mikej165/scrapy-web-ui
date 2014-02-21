@@ -9,7 +9,7 @@ Scrapy.Routers.ApplicationRouter = Backbone.Router.extend({
         'documentation':    'documentation',
         'items':            'items',
         'jobs':             'jobs',
-        'logs':             'logs',
+        'logs/(:project)/(:spider)/(:id)':       'logs',
         'projects':         'projects',
         'spiders':          'spiders',
         '404(/:url)':       '404',

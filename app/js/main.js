@@ -88,11 +88,21 @@ Scrapy = {
 
 
         // Logs
-        Scrapy.Router.on('route:logs', function (){
-            var logsView = new Scrapy.Views.Logs({
-                template: Marionette.TemplateCache.get('logs')
+        Scrapy.Router.on('route:logs', function (project, spider, id){
+            var logModel = new Scrapy.Models.Log({
+                project:    project,
+                spider:     spider,
+                id:         id
             });
-            mainRegion.show(logsView);
+            logModel.fetch({
+                success: function(){
+                    var logsView = new Scrapy.Views.Log({
+                        template: Marionette.TemplateCache.get('log'),
+                        model: logModel
+                    });
+                    logsView.render();
+                    mainRegion.show(logsView);
+            }})
         });
 
 

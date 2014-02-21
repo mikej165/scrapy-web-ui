@@ -1,0 +1,28 @@
+<p class="lead">Logs</p>
+<div class="row">
+    <div class="pull-left">
+        <form>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="infoCheckbox" value="INFO" {{#infoEnabled}}checked{{/infoEnabled}}> Info
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="warningCheckbox" value="INFO" {{#warningEnabled}}checked{{/warningEnabled}}> Warning
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="errorCheckbox" value="ERROR" {{#errorEnabled}}checked{{/errorEnabled}}> Error
+            </label>
+        </form>
+        <hr class="text-muted">
+
+    </div>
+    <div class="pull-right">
+        <div class="btn-group">
+            <button id='scroll-to-top' type="button" class="btn btn-default" title="'Scroll to top"><i class="fa fa-angle-double-up"></i></button>
+            <button id='scroll-to-bottom' type="button" class="btn btn-default" title="'Scroll to bottom"><i class="fa fa-angle-double-down"></i></button>
+            <button id='refresh' type="button" class="btn btn-default" title="Refresh"><i class="fa fa-refresh"></i></button>
+        </div>
+    </div>
+</div>
+
+
+<small>{{{log}}}</small>
