@@ -25,7 +25,7 @@ Near-term enhancements will include:
 
 Scrapy-web-ui should immediately open in your default web browser. If it doesn't, connect to the following url:
 
-    http://localhost:3000
+    http://localhost:3000/index.html
 
 ### Notes
 * app.js directly serves up the local html/js/css to your browser while proxying all scrapyd API calls to the server you've configured. This is to get around cross-site request limitations of most browsers
